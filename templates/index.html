@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <title>Mental Stress Detection in University Students using Machine Learning Algorithm</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<!--
+
+TemplateMo 546 Sixteen Clothing
+
+https://templatemo.com/tm-546-sixteen-clothing
+
+-->
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="../static/assets/css/fontawesome.css">
+    <link rel="stylesheet" href="../static/assets/css/index.css">
+    <link rel="stylesheet" href="../static/assets/css/owl.css">
+
+  </head>
+
+  <body>
+
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>  
+    <!-- ***** Preloader End ***** -->
+
+    <!-- Header -->
+    <header class="">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href=" "><h2>Student <em>Stress Detection</em></h2></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('first')}}">Home
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li> 
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('upload')}}">Upload</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('register')}}">Register</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('login')}}">Login</a>
+              </li>
+               
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Page Content -->
+    <div class="page-heading contact-heading header-text">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="text-content">
+              <h4>Prediction</h4>
+              <h2>Stress Detection</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  <div class="find-us">
+    <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-heading">
+              <center><h2>Fill the Details</h2></center>
+            </div>
+          </div>
+        <div class="col-md-8">
+
+          
+
+  <div class="img-box col-md-7 px-0 mx-auto">
+
+    <div class="col-md-6 col-lg-4" style="margin-left:150px">
+          <center><form  action="{{ url_for('predict')}}"  method="POST"> </center>
+
+
+          <div class="span5">
+                <div class="control-group">
+                         <div class="col-md-12 col-sm-12 col-xs-12" style="margin-left:80px;">
+                        <center><label class="control-label" for="inputMessage"><b></b></label></br></center>
+                      
+                  <div class="controls">
+			 
+                    <center><b>Gender:</b>    
+                    </br>
+                      <select   type="text"  name="gender" required="required" placeholder="style" width="300" style="width: 300px"></center>
+                         <option value="0"> Male </option>
+                         <option value="1">Female</option>
+                         
+                     </select>  
+				 
+                  </div> 
+</br>
+                <div class="controls">
+			 
+                    <center><b>Financial_Issues:</b>    
+                      <select   type="text"  name="financial_issues" required="required" placeholder="style" width="300" style="width: 300px"></center>
+					         <option value="0">None</option>
+                    <option value="1">Repay Loan Issues;Deadline of Fee payment</option>
+                    <option value="2">Payment for Hostel</option>
+                    <option value="3">Repay Loan Issues</option>
+                    <option value="4">Deadline of Fee payment</option>
+                    <option value="5">Deadline of Fee payment;Payment for Hostel</option>
+                    <option value="6">Repay Loan Issues;Deadline of Fee payment;Payment for Hostel</option>
+                    <option value="7">Payment for room rent</option>
+                    <option value="8">Family loan</option>
+                    <option value="9">Repay Loan Issues;Payment for Hostel</option>
+                    
+                     
+                        
+                     </select> 
+				 
+                </div> 
+</br>
+                   
+<div class="controls">
+			 
+  <center><b>Family_Issues:</b>    
+    <select   type="text"  name="family_issues" required="required" placeholder="style" width="300" style="width: 300px"></center>
+ <option value="0">None</option>
+ <option value="1">Parental Expectations</option>
+ <option value="2">Parental Expectations;Poor Communication and misunderstandings</option>
+ <option value="3">Parental Expectations;Being bullied by siblings</option>
+ <option value="4">Poor Communication and misunderstandings</option>
+ <option value="5">Parental Expectations;Poor Communication and misunderstandings;Negligence of Children</option>
+ <option value="6">Parental Expectations;Internal family dispute</option>
+ <option value="7">Poor Communication and misunderstandings;Negligence of Children</option>
+ <option value="8">Parental Expectations;Negligence of Children</option>
+ <option value="9">Negligence of Children</option>
+ <option value="10">Parental Expectations;Divorce of Parents</option>
+ <option value="11">Being bullied by siblings</option>
+ <option value="12">Divorce of Parents;Poor Communication and misunderstandings</option>
+ <option value="13">Being bullied by siblings;Divorce of Parents;Poor Communication and misunderstandings</option>
+ <option value="14">Parental Expectations;Being bullied by siblings;Divorce of Parents</option>
+ <option value="15">Divorce of Parents;Negligence of Children</option>
+ <option value="16">Divorce of Parents;Poor Communication and misunderstandings;Negligence of Children</option>
+ <option value="17">Being bullied by siblings;Poor Communication and misunderstandings;Negligence of Children</option>
+ <option value="18">Parental Expectations;Divorce of Parents;Negligence of Children</option>
+ <option value="19">NoParental Expectations;Being bullied by siblings;Poor Communication and misunderstandingsne</option>
+ <option value="20">Being bullied by siblings;Poor Communication and misunderstandings</option>
+ <option value="21">Being bullied by siblings;Negligence of Children</option>
+ <option value="22">Being bullied by siblings;Divorce of Parents;Negligence of Children</option>
+ <option value="23">Parental Expectations;Divorce of Parents;Poor Communication and misunderstandings</option>
+ <option value="24">Parental Expectations;Being bullied by siblings;Divorce of Parents;Negligence of Children</option>
+ <option value="25">Parental Expectations;Being bullied by siblings;Negligence of Children</option>
+ <option value="26">Being bullied by siblings;Divorce of Parents</option>
+ <option value="27">Parental Expectations;Being bullied by siblings;Divorce of Parents;Poor Communication and misunderstandings;Negligence of Children</option>
+ <option value="28">Parental Expectations;Being bullied by siblings;Divorce of Parents;Poor Communication and misunderstandings</option>
+ <option value="29">Divorce of Parents</option>
+ <option value="30">Internal family dispute</option>
+ <option value="31">Poor Communication</option>
+ 
+
+ 
+  
+   
+      
+   </select> 
+
+</div> 
+                   
+</br>
+
+
+
+<div class="controls">
+                     
+  <center> <b> Study_Hours: </b> </br>
+    <input type="text" name="study_hours" placeholder="0 to 10 hours" required="required" width="300" style="width: 300px"/> </center>
+     
+      </div>
+
+    </br>
+
+<div class="controls">
+			 
+  <center><b>Health_Issues:</b>    
+    <select   type="text"  name="health_issues" required="required" placeholder="style" width="300" style="width: 300px"></center>
+ <option value="0">None</option>
+ <option value="1">Anxiety or Tension</option>
+ <option value="2">Insomnia (Sleep Deprivation);Low Energy;Anxiety or Tension;Sleeping Problem;Concentration Problem</option>
+ <option value="3">Concentration Problem</option>
+ <option value="4">Sinus or Migraine or Headaches;Insomnia (Sleep Deprivation);Anxiety or Tension;Lonliness;Sleeping Problem;Concentration Problem</option>
+ <option value="5">Anxiety or Tension;Sleeping Problem</option>
+ <option value="6">Sinus or Migraine or Headaches;Low Energy;Anxiety or Tension;Lonliness;Concentration Problem</option>
+ <option value="7">Insomnia (Sleep Deprivation);Low Energy;Anxiety or Tension;Concentration Problem</option>
+ <option value="8">Sinus or Migraine or Headaches;Insomnia (Sleep Deprivation);Low Energy;Lonliness;Sleeping Problem;Concentration Problem</option>
+ <option value="9">Insomnia (Sleep Deprivation);Low Energy;Anxiety or Tension;Lonliness;Sleeping Problem;Concentration Problem</option>
+ <option value="10">Insomnia (Sleep Deprivation);Anxiety or Tension;Sleeping Problem</option>
+ <option value="11">Insomnia (Sleep Deprivation);Low Energy;Anxiety or Tension;Lonliness</option>
+ <option value="12">Sinus or Migraine or Headaches;Anxiety or Tension;Sleeping Problem</option>
+ <option value="13">Sinus or Migraine or Headaches;Insomnia (Sleep Deprivation);Anxiety or Tension</option>
+ <option value="14">Sinus or Migraine or Headaches;Covid;Low Energy;Sleeping Problem</option>
+ <option value="15">Insomnia (Sleep Deprivation);Low Energy;Anxiety or Tension</option>
+ <option value="16">Sinus or Migraine or Headaches;Covid;Insomnia (Sleep Deprivation);Low Energy</option>
+ <option value="17">Malnutrition;Covid;Anxiety or Tension</option>
+ <option value="18">Sinus or Migraine or Headaches;Anxiety or Tension</option>
+ <option value="19">Malnutrition;Insomnia (Sleep Deprivation)</option>
+ <option value="20">Covid;Anxiety or Tension;Concentration Problem</option>
+ <option value="21">Insomnia (Sleep Deprivation);Anxiety or Tension;Lonliness</option>
+ <option value="22">Insomnia (Sleep Deprivation);Anxiety or Tension</option>
+ <option value="23">Sinus or Migraine or Headaches;Insomnia (Sleep Deprivation)</option>
+ <option value="24">Insomnia (Sleep Deprivation);Lonliness</option>
+ <option value="25">Insomnia (Sleep Deprivation);Anxiety or Tension;Concentration Problem</option>
+ <option value="26">Covid;Low Energy;Lonliness</option>
+ <option value="27">Malnutrition</option>
+ <option value="28">Sinus or Migraine or Headaches;Low Energy;Lonliness</option>
+ <option value="29">Malnutrition;Low Energy;Sleeping Problem</option>
+ <option value="30">Covid;Anxiety or Tension</option>
+ <option value="31">Sinus or Migraine or Headaches;Low Energy</option>
+ <option value="32">Sinus or Migraine or Headaches;Covid;Insomnia (Sleep Deprivation);Sleeping Problem</option>
+ <option value="33">Covid;Concentration Problem</option>
+ <option value="34">Low Energy;Sleeping Problem</option>
+ <option value="35">Sleeping Problem</option>
+ <option value="36">Malnutrition;Sinus or Migraine or Headaches;Covid</option>
+ <option value="37">Covid;Low Energy;Sleeping Problem</option>
+ <option value="38">Covid;Anxiety or Tension;Sleeping Problem</option>
+ <option value="39">Covid;Insomnia (Sleep Deprivation);Low Energy</option>
+ <option value="40">Covid;Low Energy;Concentration Problem</option>
+ <option value="41">Malnutrition;Anxiety or Tension;Sleeping Problem</option>
+ <option value="42">Malnutrition;Insomnia (Sleep Deprivation);Low Energy;Anxiety or Tension</option>
+ <option value="43">Malnutrition;Insomnia (Sleep Deprivation);Lonliness;Concentration Problem</option>
+ <option value="44">Malnutrition;Covid;Lonliness</option>
+ <option value="45">Malnutrition;Insomnia (Sleep Deprivation);Lonliness</option>
+ <option value="46">Covid;Lonliness</option>
+ <option value="47">Malnutrition;Insomnia (Sleep Deprivation);Sleeping Problem</option>
+ <option value="48">Anxiety or Tension;Lonliness;Concentration Problem</option>
+ <option value="49">Lonliness</option>
+ <option value="50">Anxiety or Tension;Lonliness;Sleeping Problem;Concentration Problem</option>
+ <option value="51">Sinus or Migraine or Headaches;Covid;Insomnia (Sleep Deprivation);Low Energy;Lonliness;Sleeping Problem;Concentration Problem</option>
+ <option value="52">Insomnia (Sleep Deprivation);Anxiety or Tension;Lonliness;Concentration Problem</option>
+ <option value="53">Covid;Insomnia (Sleep Deprivation);Anxiety or Tension;Sleeping Problem;Concentration Problem</option>
+ <option value="54">Covid;Insomnia (Sleep Deprivation);Anxiety or Tension;Sleeping Problem</option>
+ <option value="55">Sinus or Migraine or Headaches;Insomnia (Sleep Deprivation);Anxiety or Tension;Sleeping Problem</option>
+ <option value="56">Sinus or Migraine or Headaches;Insomnia (Sleep Deprivation);Sleeping Problem</option>
+ <option value="57">Low Energy;Lonliness</option>
+ <option value="58">Sinus or Migraine or Headaches;Low Energy;Anxiety or Tension</option>
+ <option value="59">Sinus or Migraine or Headaches;Insomnia (Sleep Deprivation);Lonliness</option>
+ <option value="60">Insomnia (Sleep Deprivation);Low Energy</option>
+ <option value="61">Sinus or Migraine or Headaches;Covid;Insomnia (Sleep Deprivation);Anxiety or Tension;Lonliness;Sleeping Problem;Concentration Problem</option>
+ <option value="62">Malnutrition;Covid;Low Energy</option>
+ <option value="63">Sinus or Migraine or Headaches;Insomnia (Sleep Deprivation);Lonliness;Concentration Problem</option>
+ <option value="64">Covid;Low Energy;Anxiety or Tension</option>
+ <option value="65">Covid;Insomnia (Sleep Deprivation);Low Energy;Sleeping Problem</option>
+ <option value="66">Low Energy;Lonliness;Sleeping Problem</option>
+ <option value="67">Sinus or Migraine or Headaches;Insomnia (Sleep Deprivation);Low Energy;Sleeping Problem</option>
+ <option value="68">Covid;Low Energy;Lonliness;Sleeping Problem</option>
+ <option value="69">Sinus or Migraine or Headaches;Insomnia (Sleep Deprivation);Low Energy</option>
+ <option value="70">Malnutrition;Anxiety or Tension</option>
+ <option value="71">Low Energy;Lonliness;Concentration Problem</option>
+ <option value="72">Sinus or Migraine or Headaches;Covid;Low Energy;Anxiety or Tension</option>
+ <option value="73">Covid;Insomnia (Sleep Deprivation);Low Energy;Anxiety or Tension;Lonliness;Sleeping Problem;Concentration Problem</option>
+ <option value="74">Sinus or Migraine or Headaches;Covid;Insomnia (Sleep Deprivation);Concentration Problem</option>
+ <option value="75">Malnutrition;Insomnia (Sleep Deprivation);Low Energy;Anxiety or Tension;Lonliness</option>
+ <option value="76">Sinus or Migraine or Headaches;Covid;Insomnia (Sleep Deprivation);Low Energy;Lonliness</option>
+ <option value="77">Covid;Insomnia (Sleep Deprivation)</option>
+ <option value="78">Sinus or Migraine or Headaches;Covid;Anxiety or Tension</option>
+ <option value="79">Covid;Lonliness;Sleeping Problem</option>
+ <option value="80">Sinus or Migraine or Headaches;Low Energy;Sleeping Problem</option>
+ <option value="81">Covid;Anxiety or Tension;Lonliness</option>
+ <option value="82">Sinus or Migraine or Headaches;Lonliness</option>
+ <option value="83">Sinus or Migraine or Headaches;Covid;Sleeping Problem</option>
+ <option value="84">Low Energy;Anxiety or Tension;Concentration Problem</option>
+ <option value="85">Sinus or Migraine or Headaches;Sleeping Problem</option>
+ <option value="86">Covid;Low Energy;Anxiety or Tension;Sleeping Problem</option>
+ <option value="87">Insomnia (Sleep Deprivation);Low Energy;Lonliness</option>
+ <option value="88">Covid;Low Energy;Anxiety or Tension;Concentration Problem</option>
+ <option value="89">Sinus or Migraine or Headaches</option>
+ <option value="90">Sleeping Problem;Concentration Problem</option>
+ <option value="91">Low Energy</option>
+   
+  
+   
+      
+   </select> 
+
+</div> 
+					
+</br>
+
+<div class="controls">
+			 
+  <center><b>Friends_Issues:</b>    
+    <select   type="text"  name="friends_issues" required="required" placeholder="style" width="300" style="width: 300px"></center>
+ <option value="0">None</option>
+  <option value="1">Comparison between them</option>
+  <option value="2">Mistrust</option>
+  <option value="3">Jealousy;Mistrust</option>
+  <option value="4">Betrayal</option>
+  <option value="5">Comparison between them;Jealousy</option>
+  <option value="6">Conflicts</option>
+  <option value="7">Conflicts;Comparison between them;Betrayal</option>
+  <option value="8">Jealousy</option>
+  <option value="9">Comparison between them;Mistrust</option>
+  <option value="10">Conflicts;Comparison between them;Jealousy</option>
+  <option value="11">Conflicts;Comparison between them;Mistrust</option>
+  <option value="12">Comparison between them;lack of deep communication</option>
+  <option value="13">friendly</option>
+  <option value="14">Jealousy;Betrayal</option>
+  <option value="15">Conflicts;Jealousy</option>
+  <option value="16">Conflicts;Comparison between them</option>
+  <option value="17">Comparison between them;Jealousy;Mistrust</option>
+  <option value="18">Conflicts;Jealousy;Betrayal</option>
+  <option value="19">Comparison between them;Betrayale</option>
+  <option value="20">Mistrust;Betrayal</option>
+  <option value="21">Conflicts;Comparison between them;Jealousy;Mistrust;Betrayal</option>
+  <option value="22">Jealousy;Mistrust;Betrayal</option>
+  <option value="23">Conflicts;Mistrust</option>
+  <option value="24">Comparison between them;Jealousy;Betrayal</option>
+  <option value="25">Comparison between them;Mistrust;Betrayal</option>
+  <option value="26">Conflicts;Jealousy;Mistrust</option>
+  <option value="27">Comparison between them;Jealousy;Mistrust;Betrayal</option>
+  <option value="28">Conflicts;Jealousy;Mistrust;Betrayal</option>
+ 
+  
+   
+      
+   </select> 
+
+</div> 
+
+</br>
+
+
+<div class="controls">
+                     
+  <center> <b> Friends_Time: </b> </br>
+    <input type="text" name="friends_time" placeholder="1 to 10 hours" required="required" width="300" style="width: 300px"/> </center>
+     
+      </div>
+
+    </br>
+
+
+    <div class="controls">
+			 
+      <center><b>Overload:</b>    
+      </br>
+        <select   type="text"  name="overload" required="required" placeholder="style" width="300" style="width: 300px"></center>
+           <option value="0"> No </option>
+           <option value="1">Yes</option>
+           
+       </select>  
+
+    </div> 
+  </br>
+  <div class="controls">
+			 
+    <center><b>Unpleasant:</b>    
+    </br>
+      <select   type="text"  name="unpleasant" required="required" placeholder="style" width="300" style="width: 300px"></center>
+         <option value="0"> No </option>
+         <option value="1">Yes</option>
+         
+     </select>  
+
+  </div> 
+
+</br>
+                   
+<div class="controls">
+			 
+  <center><b>Academic:</b>    
+  </br>
+    <select   type="text"  name="academic" required="required" placeholder="style" width="300" style="width: 300px"></center>
+       <option value="0"> No </option>
+       <option value="1">Yes</option>
+       
+   </select>  
+
+</div> 
+</br>
+<div class="controls">
+   
+<center><b>Career:</b>    
+</br>
+  <select   type="text"  name="career" required="required" placeholder="style" width="300" style="width: 300px"></center>
+     <option value="0"> No </option>
+     <option value="1">Yes</option>
+     
+ </select>  
+
+</div> 
+
+</br>
+<div class="controls">
+ <center><b>Criticism:</b>    
+   </br>
+  <select   type="text"  name="criticism" required="required" placeholder="style" width="300" style="width: 300px"></center>
+     <option value="0"> No </option>
+     <option value="1">Yes</option>
+     
+ </select>  
+
+</div> 
+</br>
+<div class="controls">
+   <center><b>Conflicts:</b>    
+   </br>
+  <select   type="text"  name="conflicts" required="required" placeholder="style" width="300" style="width: 300px"></center>
+     <option value="0"> No </option>
+     <option value="1">Yes</option>
+     
+ </select>  
+
+</div> 
+</br>
+
+
+
+</br>
+<div class="col-md-6 col-lg-4" style="margin-left:80px">
+<center>  <button type="submit" class="btn btn-primary">Predict </button></center>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</form>
+
+</div>
+
+</br>
+</br>
+<!-- <h3> Prediction is : {{ prediction_text }} </h3> -->
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+</div>
+
+          
+
+
+        </div>
+
+
+
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+    </div>
+</div>
+    
+
+</br>
+</br>
+</br>
+</br>
+</br>
+    
+
+    
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+             
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../static/vendor/jquery/jquery.min.js"></script>
+    <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- Additional Scripts -->
+    <script src="../static/assets/js/custom.js"></script>
+    <script src="../static/assets/js/owl.js"></script>
+    <script src="../static/assets/js/slick.js"></script>
+    <script src="../static/assets/js/isotope.js"></script>
+    <script src="../static/assets/js/accordions.js"></script>
+
+
+    <script language = "text/Javascript"> 
+      cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
+      function clearField(t){                   //declaring the array outside of the
+      if(! cleared[t.id]){                      // function makes it static and global
+          cleared[t.id] = 1;  // you could use true and false, but that's more typing
+          t.value='';         // with more chance of typos
+          t.style.color='#fff';
+          }
+      }
+    </script>
+
+
+  </body>
+
+</html>

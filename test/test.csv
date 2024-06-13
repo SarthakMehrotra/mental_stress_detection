@@ -1,0 +1,12 @@
+Gender,financial_issues,family_issues,study_hours,health_issues,friends_issues,friends_time,overload,unpleasant,academic,career,criticism,conflicts,stress_level
+Female,Repay Loan Issues;Deadline of Fee payment,Parental Expectations;Divorce of Parents,1,Low Energy;Sleeping Problem,Jealousy;Mistrust,2,No,Yes,Yes,Yes,Yes,No,Stressed
+Female,Deadline of Fee payment;Payment for Hostel,Parental Expectations;Divorce of Parents,2,Covid;Low Energy;Sleeping Problem,Conflicts;Mistrust,2,No,No,Yes,Yes,Yes,No,Stressed
+Female,Deadline of Fee payment,Parental Expectations;Poor Communication and misunderstandings,1,Covid;Anxiety or Tension,Jealousy;Mistrust,4,Yes,Yes,Yes,No,Yes,Yes,Stressed
+Female,Deadline of Fee payment;Payment for Hostel,Being bullied by siblings;Poor Communication and misunderstandings,5,Covid;Anxiety or Tension;Sleeping Problem,Jealousy,2,No,No,No,No,Yes,Yes,Stressed
+Male,Repay Loan Issues;Payment for Hostel,Being bullied by siblings;Poor Communication and misunderstandings,1,Covid;Anxiety or Tension;Lonliness,Comparison between them,2,Yes,Yes,Yes,No,No,Yes,Highly Stressed
+Female,Deadline of Fee payment;Payment for Hostel,Being bullied by siblings;Negligence of Children,10,Covid;Anxiety or Tension;Sleeping Problem,Conflicts;Jealousy,2,No,Yes,Yes,Yes,No,Yes,Highly Stressed
+Male,Repay Loan Issues;Deadline of Fee payment,Divorce of Parents;Poor Communication and misunderstandings,1,Sinus or Migraine or Headaches;Lonliness,Conflicts;Jealousy;Betrayal,4,Yes,No,Yes,No,Yes,Yes,Highly Stressed
+Male,None,None,3,None,Conflicts,7,No,Yes,No,No,No,No,Normal
+Female,None,Internal family dispute,2,Malnutrition,Jealousy,7,No,No,Yes,No,No,No,Normal
+Male,Payment for room rent,Poor Communication,5,None,None,3,No,No,No,No,No,No,Normal
+Female,None,None,8,None,None,6,No,No,No,No,No,No,Normal

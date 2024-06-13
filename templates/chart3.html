@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <title>Mental Stress Detection in University Students using Machine Learning Algorithm</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<!--
+
+TemplateMo 546 Sixteen Clothing
+
+https://templatemo.com/tm-546-sixteen-clothing
+
+-->
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="../static/assets/css/fontawesome.css">
+    <link rel="stylesheet" href="../static/assets/css/chart3.css">
+    <link rel="stylesheet" href="../static/assets/css/owl.css">
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/css/jumbotron-narrow.css" rel="stylesheet">
+    <script src="../static/js/jquery-1.11.2.js"></script>
+    <script src="../static/js/Chart.min.js"></script> 
+        <!-- Custom Fonts -->
+
+  </head>
+
+  <body>
+
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>  
+    <!-- ***** Preloader End ***** -->
+
+    <!-- Header -->
+    <header class="">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+           
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="{{ url_for('first')}}">Home
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li> 
+             
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('loginad')}}">Admin login</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('admin')}}">Full details</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('chart3')}}">Chart</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('performance')}}">Analysis</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('first')}}">Logout</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Page Content -->
+    <div class="page-heading contact-heading header-text">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="text-content">
+              <h4>Chart</h4>
+              <h2>Stress Detection</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  <div class="find-us">
+    <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-heading">
+              <center><h2>Chart</h2></center>
+            </div>
+          </div>
+        <div class="col-md-8">
+
+          
+
+   
+          <body> 
+            <div class="container">
+              <div class="header">
+              
+               
+              </div>
+            <canvas id="chart" width="600" height="400"></canvas>
+          
+                 
+        <script>
+         
+           // bar chart data
+           var chartData = {
+           labels : [{% for item in labels %}
+                          "{{item}}",
+                      {% endfor %}],
+           datasets : [
+              {
+                    label: '{{legend}}',
+                    fillColor: "rgba(151,187,205,0.2)",
+                    strokeColor: "rgba(151,187,205,1)",
+                    pointColor: "rgba(151,187,205,1)",
+                    pointStrokeColor: "#fff",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "rgba(151,187,205,1)",
+                    bezierCurve : false,
+                    data : [{% for item in values %}
+                              {{item}},
+                            {% endfor %}]
+              }]
+           }
+         
+            Chart.defaults.global.animationSteps = 50;
+            Chart.defaults.global.tooltipYPadding = 16;
+            Chart.defaults.global.tooltipCornerRadius = 0;
+            Chart.defaults.global.tooltipTitleFontStyle = "normal";
+            Chart.defaults.global.tooltipFillColor = "rgba(0,0,0,0.8)";
+            Chart.defaults.global.animationEasing = "easeOutBounce";
+            Chart.defaults.global.responsive = false;
+            Chart.defaults.global.scaleLineColor = "black";
+            Chart.defaults.global.scaleFontSize = 16;
+         
+           // get bar chart canvas
+           var ctx = document.getElementById("chart").getContext("2d");
+         
+           steps = 10
+           max = 40
+           
+           var BarChartDemo = new Chart(ctx).Bar(chartData, {
+                scaleOverride: true,
+                scaleSteps: steps,
+                scaleStepWidth: Math.ceil(max / steps),
+                scaleStartValue: 0,
+                scaleShowVerticalLines: true,
+                scaleShowGridLines : true,
+                barShowStroke : true,
+                scaleShowLabels: true,
+                bezierCurve: false,
+         
+           });
+           
+        </script>
+        </body>
+
+
+
+
+
+
+
+      
+
+
+
+
+ 
+
+
+
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+    </div>
+</div>
+</div>    
+
+    
+    
+
+    
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+             
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../static/vendor/jquery/jquery.min.js"></script>
+    <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- Additional Scripts -->
+    <script src="../static/assets/js/custom.js"></script>
+    <script src="../static/assets/js/owl.js"></script>
+    <script src="../static/assets/js/slick.js"></script>
+    <script src="../static/assets/js/isotope.js"></script>
+    <script src="../static/assets/js/accordions.js"></script>
+
+
+    <script language = "text/Javascript"> 
+      cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
+      function clearField(t){                   //declaring the array outside of the
+      if(! cleared[t.id]){                      // function makes it static and global
+          cleared[t.id] = 1;  // you could use true and false, but that's more typing
+          t.value='';         // with more chance of typos
+          t.style.color='#fff';
+          }
+      }
+    </script>
+
+
+  </body>
+
+</html>

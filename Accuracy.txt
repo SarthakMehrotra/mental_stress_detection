@@ -1,0 +1,7 @@
+Mental Stress Detection in University Students using Machine Learning Algorithm.
+
+Algorithm / Model Used: Random Forest Classifier.
+
+Train Accuracy: 100%
+Test Accuracy: 93%.
+
